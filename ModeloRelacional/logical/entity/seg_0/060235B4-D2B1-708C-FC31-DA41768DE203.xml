@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="060235B4-D2B1-708C-FC31-DA41768DE203" name="Evaluacion">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:42:18 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_Evaluacion" id="11E0A5FF-59C2-FF3C-D478-8599C3ECA1BE">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:42:26 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fecha" id="9C08FC50-DB88-1E00-5087-B66706F73FDC">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:44:35 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_Empleado" id="7959272D-AC06-F203-E5FE-6E2848ADB9A5">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:48:13 UTC</createdTime>
+<generatorID>A8986452-18BD-326F-2485-39E1DCAAA28A</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<referedAttribute>A4886FE2-52A5-C757-E753-A35274FA581B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_Paciente" id="1B1C20CB-17F9-055E-F33B-A1D6B6273E81">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:48:20 UTC</createdTime>
+<generatorID>EF60FC32-85B5-FFF8-A0F1-AA14FB52C92D</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<referedAttribute>9964A386-1D13-2BC5-BCCC-5F4D51CC64DF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C6BE5FE6-4533-CC20-FC92-8C3CD713E9B5" name="Evaluacion PK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:44:33 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>11E0A5FF-59C2-FF3C-D478-8599C3ECA1BE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

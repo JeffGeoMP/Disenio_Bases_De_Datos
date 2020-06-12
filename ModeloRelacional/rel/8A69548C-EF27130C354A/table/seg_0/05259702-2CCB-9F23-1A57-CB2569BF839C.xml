@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="05259702-2CCB-9F23-1A57-CB2569BF839C" name="Empleado">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>D2264E54-99D7-CDA6-7D1F-BB311C6B8E2E</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_Empleado" id="3B782468-ADC8-819F-4074-34C81DCF0CB5">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>A4886FE2-52A5-C757-E753-A35274FA581B</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="E1CB0F2B-4339-5252-5BD8-6A8FA82682FD">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>4B798FBD-690D-B20B-7812-3E724BF9D1B5</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Apellidos" id="C76F2B44-7668-7864-9E26-394EACCFF6D8">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>B5B5D532-6A58-4DFB-06CF-5595E1009AD3</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Direccion" id="732B8F9D-60DA-948B-005E-DA091A0742DC">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>5CAAB9DF-3D79-B6DA-18ED-F7DCA9699C8E</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Telefono" id="EA097164-8852-60A3-C321-D70B3FA255F1">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>AE85CA70-3138-DDFA-A672-399F4CCBB3DB</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_Nacimiento" id="7AC6B718-16CE-62A4-B414-5658F003F6FF">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>76731A8F-577C-1439-65CD-AD3EC2E53097</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Genero" id="B27065AE-4D0C-41D1-4436-5CC33342C480">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>CB9CD5D8-37CF-C453-84B0-1C44C93C22E5</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Profesion_Id_Profesion" id="90C22748-6820-91B9-F59B-2E697B469A5D">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>7724E08B-F803-C069-9A6D-A2FC23CB81CF</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="582A352A-4B92-CF0F-5FBD-36B4E56F0026" referredColumn="BBFF6ADF-2535-DAEA-7AEF-B1081D1326F3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E7BB1006-ACC1-BD11-4322-2267A87E7EBD" name="Empleado_PK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>3F9F4BC7-5E73-A2C7-C5ED-6077BB08B1C2</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B782468-ADC8-819F-4074-34C81DCF0CB5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B6F08DD-0860-D1F5-F639-FEB6A62BA3F7" name="Empleado_Profesion_FK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>649BABC7-D242-4256-12E1-9B33E99315BC</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="90C22748-6820-91B9-F59B-2E697B469A5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

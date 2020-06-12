@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9265BC43-E217-132D-2771-34D892F04BC7" name="Detalle_Evaluacion">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>712A47B2-C2DB-8D00-6B14-54032A83812C</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_Evaluacion" id="3431D658-2F49-BE93-C46B-5D4B2BB4E98B">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>356A7F72-0EE8-8713-0082-55D5E096030E</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Evaluacion_Id_Evaluacion" id="DA71BFA0-93ED-2796-B413-2857D9D2B84A">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>C3B1E103-C0C2-A842-2DC3-24590A1AF644</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AE52F55F-3B7F-4A02-A121-2600368F8537" referredColumn="F51FA653-FCB2-4296-D71B-494049EE4174"/>
+</associations>
+</Column>
+<Column name="Sintoma_Id_Sintoma" id="EF768D75-0806-95CA-C4FE-040C041231F6">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>EDB4D599-32A5-84FC-00C4-963D485F7016</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E1FFBA60-6110-6CCE-9FBF-6B4148B4E866" referredColumn="A7A99C85-4B33-5487-F5C0-ED01A4CAAC6E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DD371F0F-2359-F7D5-08DF-37EDB070BCD3" name="Detalle_Evaluacion_Evaluacion_FK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>FB41F550-CB80-E1DD-6C0B-C26309AA6095</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA71BFA0-93ED-2796-B413-2857D9D2B84A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8D1153EB-5270-B7A8-44A6-937F7BE4D2E5" name="Detalle_Evaluacion_Sintoma_FK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>A7F590A1-C453-F81F-551B-B36557AAF548</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF768D75-0806-95CA-C4FE-040C041231F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

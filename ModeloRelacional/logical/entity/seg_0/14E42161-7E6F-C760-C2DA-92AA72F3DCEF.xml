@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="14E42161-7E6F-C760-C2DA-92AA72F3DCEF" name="Tratamiento">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:58:44 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_Tratamiento" id="5B7EC793-41F8-A416-9163-93772577ECDA">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:59:07 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre" id="88825677-B2C3-EE8A-7E72-C76FBAA730C2">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:59:13 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="658F4DF2-1DC1-17F1-E4E0-E84763FF04C7" name="Tratamiento PK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:59:24 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5B7EC793-41F8-A416-9163-93772577ECDA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

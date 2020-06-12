@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D2264E54-99D7-CDA6-7D1F-BB311C6B8E2E" name="Empleado">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:20:12 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_Empleado" id="A4886FE2-52A5-C757-E753-A35274FA581B">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:26:57 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre" id="4B798FBD-690D-B20B-7812-3E724BF9D1B5">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:27:37 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Apellidos" id="B5B5D532-6A58-4DFB-06CF-5595E1009AD3">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:28:04 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Direccion" id="5CAAB9DF-3D79-B6DA-18ED-F7DCA9699C8E">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:30:32 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefono" id="AE85CA70-3138-DDFA-A672-399F4CCBB3DB">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:30:56 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fecha_Nacimiento" id="76731A8F-577C-1439-65CD-AD3EC2E53097">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:31:46 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Genero" id="CB9CD5D8-37CF-C453-84B0-1C44C93C22E5">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:32:11 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_Profesion" id="7724E08B-F803-C069-9A6D-A2FC23CB81CF">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:38:52 UTC</createdTime>
+<generatorID>649BABC7-D242-4256-12E1-9B33E99315BC</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<referedAttribute>8FDECE2B-DA7B-2C76-D53A-A556650ABF7C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3F9F4BC7-5E73-A2C7-C5ED-6077BB08B1C2" name="Empleado PK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 03:27:35 UTC</createdTime>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A4886FE2-52A5-C757-E753-A35274FA581B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

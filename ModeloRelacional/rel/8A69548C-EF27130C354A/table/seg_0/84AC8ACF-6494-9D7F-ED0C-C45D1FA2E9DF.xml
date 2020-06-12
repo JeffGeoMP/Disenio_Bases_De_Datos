@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="84AC8ACF-6494-9D7F-ED0C-C45D1FA2E9DF" name="Detalle_Tratamiento">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>1013DBDC-0DD7-789E-132A-F7985129A1FD</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_Detalle" id="E708F58D-2885-B38C-38EA-17FED5A3BE7F">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>85123FB0-FB42-D8D8-E147-D6C40CEBF9CB</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Seguimiento_Id_Seguimiento" id="6DD1BFE0-8E09-585F-804D-CC5A58E630A9">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>879B94B8-D2E5-AC1E-63D3-443390418DA2</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B506B864-9913-3399-DFC9-CFB89F4AD274" referredColumn="34E3CA39-B298-6A4D-993B-D75D3B7F479D"/>
+</associations>
+</Column>
+<Column name="Tratamiento_Id_Tratamiento" id="6A99F972-5B0D-69B2-AD0D-0CCE5779083D">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>CDAFFCBE-9EF7-0558-E6D3-C91F812D6A11</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ED0A1E58-6612-1842-79EF-1DECFC4B9D5E" referredColumn="7AA79534-44CE-6878-1C7B-527A6C2DE902"/>
+</associations>
+</Column>
+<Column name="Seguimiento_Id_Paciente" id="C2A7B07D-A73F-1DCA-F218-F9B6CAC16017">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>84A9D81C-9556-A16C-1141-04D3A2DD4954</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B506B864-9913-3399-DFC9-CFB89F4AD274" referredColumn="D1A9DB0E-2E51-224E-A323-85C5FB2D10E4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D4C4D481-672E-C095-2D80-7CCBA35B6697" name="Detalle_Tratamiento_PK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>F5D3DC86-9BC4-81CC-6ED6-267E4F6A5C4F</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E708F58D-2885-B38C-38EA-17FED5A3BE7F"/>
+<colUsage columnID="6A99F972-5B0D-69B2-AD0D-0CCE5779083D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4E5C1F7-3E56-56C1-34FA-3E033BA1E987" name="Detalle_Tratamiento_Seguimiento_FK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>D734878A-8B82-C12D-ED1F-CE9B88D8E43E</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6DD1BFE0-8E09-585F-804D-CC5A58E630A9"/>
+<colUsage columnID="C2A7B07D-A73F-1DCA-F218-F9B6CAC16017"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CC218CD7-A60F-654F-41DF-2AFF19339E48" name="Detalle_Tratamiento_Tratamiento_FK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-12 04:13:59 UTC</createdTime>
+<generatorID>259975D9-5276-2BCF-12F1-F62C737CF2EA</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A99F972-5B0D-69B2-AD0D-0CCE5779083D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
