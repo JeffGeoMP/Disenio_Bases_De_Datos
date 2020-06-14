@@ -60,7 +60,6 @@
 <createdTime>2020-06-12 04:13:59 UTC</createdTime>
 <generatorID>AE85CA70-3138-DDFA-A672-399F4CCBB3DB</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -73,7 +72,6 @@
 <createdTime>2020-06-12 04:13:59 UTC</createdTime>
 <generatorID>76731A8F-577C-1439-65CD-AD3EC2E53097</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -85,7 +83,6 @@
 <createdTime>2020-06-12 04:13:59 UTC</createdTime>
 <generatorID>CB9CD5D8-37CF-C453-84B0-1C44C93C22E5</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>

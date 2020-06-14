@@ -24,8 +24,9 @@
 <createdTime>2020-06-12 04:13:59 UTC</createdTime>
 <generatorID>964D1359-C8B1-FC0D-3BB0-BC7004C07097</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>

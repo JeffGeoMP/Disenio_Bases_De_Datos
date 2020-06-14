@@ -13,8 +13,9 @@
 <createdTime>2020-06-12 04:13:59 UTC</createdTime>
 <generatorID>356A7F72-0EE8-8713-0082-55D5E096030E</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -50,6 +51,18 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4A61AE7C-2938-3BFB-B534-882BA94F00F2" name="Detalle_Evaluacion_PK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-14 03:46:10 UTC</createdTime>
+<generatorID>0FB22E4A-8143-1599-2246-0B803C3CFE4E</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3431D658-2F49-BE93-C46B-5D4B2BB4E98B"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="DD371F0F-2359-F7D5-08DF-37EDB070BCD3" name="Detalle_Evaluacion_Evaluacion_FK">
 <createdBy>Jeffe</createdBy>
 <createdTime>2020-06-12 04:13:59 UTC</createdTime>

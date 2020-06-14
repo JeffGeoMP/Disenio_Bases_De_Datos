@@ -73,7 +73,6 @@
 <engineerTo>
 <item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -87,7 +86,6 @@
 <engineerTo>
 <item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -100,7 +98,6 @@
 <engineerTo>
 <item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -114,7 +111,6 @@
 <engineerTo>
 <item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT021</logicalDatatype>
@@ -138,8 +134,9 @@
 <createdBy>Jeffe</createdBy>
 <createdTime>2020-06-12 03:33:16 UTC</createdTime>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

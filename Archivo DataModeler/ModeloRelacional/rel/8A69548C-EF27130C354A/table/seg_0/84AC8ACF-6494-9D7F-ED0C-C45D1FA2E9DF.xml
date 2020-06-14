@@ -30,9 +30,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="B506B864-9913-3399-DFC9-CFB89F4AD274" referredColumn="34E3CA39-B298-6A4D-993B-D75D3B7F479D"/>
-</associations>
 </Column>
 <Column name="Tratamiento_Id_Tratamiento" id="6A99F972-5B0D-69B2-AD0D-0CCE5779083D">
 <createdBy>Jeffe</createdBy>
@@ -60,8 +57,31 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha" id="338F1249-D42E-AB3C-0403-5D8E3FB87BD5">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-14 03:46:10 UTC</createdTime>
+<generatorID>9B9BC009-B294-172B-1F4F-65007698761E</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Paciente_Id_Paciente" id="12898E2C-2C00-00E6-F439-685E4EC45DCE">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-14 03:46:10 UTC</createdTime>
+<generatorID>93E49A8C-2685-7533-7AA3-F75C9522BBE8</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="B506B864-9913-3399-DFC9-CFB89F4AD274" referredColumn="D1A9DB0E-2E51-224E-A323-85C5FB2D10E4"/>
+<colAssociation fkAssociation="31219D58-2040-563C-8141-70AA4D79C915" referredColumn="48FF27C1-E12F-D317-FA5B-1C0B3EF245EB"/>
 </associations>
 </Column>
 </columns>
@@ -77,18 +97,7 @@
 <indexColumnUsage>
 <colUsage columnID="E708F58D-2885-B38C-38EA-17FED5A3BE7F"/>
 <colUsage columnID="6A99F972-5B0D-69B2-AD0D-0CCE5779083D"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="F4E5C1F7-3E56-56C1-34FA-3E033BA1E987" name="Detalle_Tratamiento_Seguimiento_FK">
-<createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 04:13:59 UTC</createdTime>
-<generatorID>D734878A-8B82-C12D-ED1F-CE9B88D8E43E</generatorID>
-<ownerDesignName>ModeloRelacional</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="6DD1BFE0-8E09-585F-804D-CC5A58E630A9"/>
-<colUsage columnID="C2A7B07D-A73F-1DCA-F218-F9B6CAC16017"/>
+<colUsage columnID="12898E2C-2C00-00E6-F439-685E4EC45DCE"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="CC218CD7-A60F-654F-41DF-2AFF19339E48" name="Detalle_Tratamiento_Tratamiento_FK">
@@ -100,6 +109,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="6A99F972-5B0D-69B2-AD0D-0CCE5779083D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2148D8C9-970C-9576-2F76-504C6160FDF9" name="Detalle_Tratamiento_Paciente_FK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-14 03:46:10 UTC</createdTime>
+<generatorID>63FF9056-9632-E1D5-E7B2-98CE5E7DC475</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="12898E2C-2C00-00E6-F439-685E4EC45DCE"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

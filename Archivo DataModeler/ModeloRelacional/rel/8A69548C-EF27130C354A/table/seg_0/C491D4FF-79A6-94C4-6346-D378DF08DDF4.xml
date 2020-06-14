@@ -25,7 +25,9 @@
 <generatorID>9C08FC50-DB88-1E00-5087-B66706F73FDC</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
