@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="15D08C50-4C01-DD35-2D02-0E0E8DE550A3" name="DETALLE_EVALUACION">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>712A47B2-C2DB-8D00-6B14-54032A83812C</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_Detalle" id="1B2C2FA8-3C32-918E-D559-30AB51AAD084">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>356A7F72-0EE8-8713-0082-55D5E096030E</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Evaluacion_Id_Evaluacion" id="09F4ECC6-B03F-69B6-9D78-9729883A8C5D">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>C3B1E103-C0C2-A842-2DC3-24590A1AF644</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1285610D-7BC6-BC0C-9BBA-1D817763D611" referredColumn="4C8274DC-6100-409C-F9E1-1DFA62DDA791"/>
+</associations>
+</Column>
+<Column name="SINTOMA_Id_Sintoma" id="10F32A00-8544-091F-263A-627AAF7689D7">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>EDB4D599-32A5-84FC-00C4-963D485F7016</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4FB0F812-1EBC-E502-DF9C-D330DBA4678F" referredColumn="61361190-1243-9C64-27A4-D2F670BE6FC9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BBED48B5-AA95-A510-1E6F-DBF6E523BA13" name="DETALLE_EVALUACION_PK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>0FB22E4A-8143-1599-2246-0B803C3CFE4E</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1B2C2FA8-3C32-918E-D559-30AB51AAD084"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="25DC0AE8-DF97-9E91-B167-96910B3B3405" name="DETALLE_EVALUACION_Evaluacion_FK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>FB41F550-CB80-E1DD-6C0B-C26309AA6095</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09F4ECC6-B03F-69B6-9D78-9729883A8C5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="48E0467A-6FA5-D40A-40AE-2A211D405847" name="DETALLE_EVALUACION_SINTOMA_FK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>A7F590A1-C453-F81F-551B-B36557AAF548</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="10F32A00-8544-091F-263A-627AAF7689D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

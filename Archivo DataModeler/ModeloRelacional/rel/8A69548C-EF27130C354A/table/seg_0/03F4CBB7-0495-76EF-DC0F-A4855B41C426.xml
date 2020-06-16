@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="03F4CBB7-0495-76EF-DC0F-A4855B41C426" name="SINTOMA">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>B3816274-FD79-D6B1-3A0F-D5941FECEDCB</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_Sintoma" id="61361190-1243-9C64-27A4-D2F670BE6FC9">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>3C59788F-EB58-C7F1-64C3-4853667057B3</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="D17BE5FD-917C-3C15-23B1-A8CC4B76BE66">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>B3ED43CB-B61D-1EA5-98A5-8ABE2385DD08</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8EEE83A6-57EC-F687-44FD-957CAD7756D6" name="SINTOMA_PK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>AD46A31F-56FD-84DB-2C9E-C9E2C819D37C</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61361190-1243-9C64-27A4-D2F670BE6FC9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

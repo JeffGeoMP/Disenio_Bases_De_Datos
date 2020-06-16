@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AD63F8BB-2233-CE4B-43DD-0F5BCD0EA8B3" containerWithKeyObject="2A07BB88-4022-2AAD-D054-B84AB56B408C" localFKIndex="1BBCEE27-059F-CC7A-6941-5D76534B5A8B" name="Sintoma_Diagnostico_SINTOMA_FK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>E16DB9A9-A3F8-06A4-7C48-7595D9A52E46</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<referredTableLongName>SINTOMA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>03F4CBB7-0495-76EF-DC0F-A4855B41C426</referredTableID>
+<keyObject>8EEE83A6-57EC-F687-44FD-957CAD7756D6</keyObject>
+<referredKeyID>8EEE83A6-57EC-F687-44FD-957CAD7756D6</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id_Sintoma</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

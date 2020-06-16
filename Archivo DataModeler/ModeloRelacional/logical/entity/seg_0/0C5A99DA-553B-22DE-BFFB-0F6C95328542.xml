@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="712A47B2-C2DB-8D00-6B14-54032A83812C" name="DETALLE_EVALUACION">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0C5A99DA-553B-22DE-BFFB-0F6C95328542" name="Sintoma_Diagnostico">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 03:53:06 UTC</createdTime>
+<createdTime>2020-06-17 03:48:40 UTC</createdTime>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id_Detalle" id="356A7F72-0EE8-8713-0082-55D5E096030E">
+<Attribute name="Id_Sintoma_Diagnostico" id="87A81BB7-0BD3-3460-6FDC-83A5DD127804">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 03:53:16 UTC</createdTime>
+<createdTime>2020-06-17 03:48:51 UTC</createdTime>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
@@ -27,24 +27,22 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_Evaluacion1" id="C3B1E103-C0C2-A842-2DC3-24590A1AF644">
+<Attribute name="Ragno" id="EF115560-63A2-C643-1078-2B506FABDC00">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 03:53:47 UTC</createdTime>
-<generatorID>FB41F550-CB80-E1DD-6C0B-C26309AA6095</generatorID>
+<createdTime>2020-06-17 03:49:17 UTC</createdTime>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
 </engineerTo>
-<referedAttribute>11E0A5FF-59C2-FF3C-D478-8599C3ECA1BE</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id_Sintoma" id="EDB4D599-32A5-84FC-00C4-963D485F7016">
+<Attribute name="Id_Sintoma" id="064F919E-B760-1FAF-576B-2AC38F7F8FA0">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 03:53:54 UTC</createdTime>
-<generatorID>A7F590A1-C453-F81F-551B-B36557AAF548</generatorID>
+<createdTime>2020-06-17 03:49:43 UTC</createdTime>
+<generatorID>E16DB9A9-A3F8-06A4-7C48-7595D9A52E46</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
@@ -55,19 +53,34 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Id_Diagnostico" id="87378B55-97BF-BF29-CA7E-17DAC1A8096A">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-17 03:49:54 UTC</createdTime>
+<generatorID>2C2833E8-BE15-FD12-640B-07FE88E5C407</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<referedAttribute>C2906F70-5F6F-E3B9-60BA-2991A65EB89D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="0FB22E4A-8143-1599-2246-0B803C3CFE4E" name="Detalle_Evaluacion PK">
+<identifier id="20294B8F-6FBE-CBC2-B5AD-B7BD80EB8078" name="Sintoma_Diagnostico PK">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-14 03:38:41 UTC</createdTime>
+<createdTime>2020-06-17 03:49:11 UTC</createdTime>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="false"/>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>356A7F72-0EE8-8713-0082-55D5E096030E</attributeRef>
+<attributeRef>87A81BB7-0BD3-3460-6FDC-83A5DD127804</attributeRef>
+<attributeRef>064F919E-B760-1FAF-576B-2AC38F7F8FA0</attributeRef>
+<attributeRef>87378B55-97BF-BF29-CA7E-17DAC1A8096A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

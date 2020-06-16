@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="37E480D2-AF96-06AF-BDC3-8ED9ACF4D201" name="DETALLE_TRATAMIENTO">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>1013DBDC-0DD7-789E-132A-F7985129A1FD</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_Detalle" id="6827C192-FF25-5F0E-8BA0-765BF657EBF2">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>85123FB0-FB42-D8D8-E147-D6C40CEBF9CB</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha" id="AB85292C-1813-4B07-A600-EE453389FE9C">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>9B9BC009-B294-172B-1F4F-65007698761E</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRATAMIENTO_Id_Tratamiento" id="D60B7902-993A-84CE-E7EF-E1E0262E38D2">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>CDAFFCBE-9EF7-0558-E6D3-C91F812D6A11</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CC83862F-1D0D-2061-3AA2-BD06D19879A4" referredColumn="B32A4B14-22F1-D82C-41C0-B1BBDFD4A9F6"/>
+</associations>
+</Column>
+<Column name="PACIENTE_Id_Paciente" id="9EA24D44-79E3-B4B6-7062-C91EC3F5EB1C">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>93E49A8C-2685-7533-7AA3-F75C9522BBE8</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0C89BBAB-769E-6F0E-25C3-E1E259C78F81" referredColumn="C60218ED-1C3E-5426-C142-4032A2770C18"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="336AFCEB-C0A0-4E1F-5F76-0B4061AD8AB3" name="DETALLE_TRATAMIENTO_PK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>F5D3DC86-9BC4-81CC-6ED6-267E4F6A5C4F</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6827C192-FF25-5F0E-8BA0-765BF657EBF2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="22BF5B25-7DED-4C2E-5C5C-38BDCFBA8891" name="DETALLE_TRATAMIENTO_TRATAMIENTO_FK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>259975D9-5276-2BCF-12F1-F62C737CF2EA</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D60B7902-993A-84CE-E7EF-E1E0262E38D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7EC7C5D9-81DF-F974-7927-2F4722FE8BFD" name="DETALLE_TRATAMIENTO_PACIENTE_FK">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 22:40:45 UTC</createdTime>
+<generatorID>63FF9056-9632-E1D5-E7B2-98CE5E7DC475</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9EA24D44-79E3-B4B6-7062-C91EC3F5EB1C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
