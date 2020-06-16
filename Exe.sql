@@ -1,0 +1,2 @@
+--Ejecuta La Carga hacia la tabla temporal creada en el IntruccionesDDL.sql
+--sqlldr userid=system control='[BD1]ArchivoControl.ctl'
