@@ -6,7 +6,6 @@ DROP TABLE EVALUACION CASCADE CONSTRAINTS;
 DROP TABLE SINTOMA CASCADE CONSTRAINTS;
 DROP TABLE DETALLE_EVALUACION CASCADE CONSTRAINTS;
 DROP TABLE DIAGNOSTICO CASCADE CONSTRAINTS;
-DROP TABLE SINTOMA_DIAGNOSTICO CASCADE CONSTRAINTS;
 DROP TABLE TRATAMIENTO CASCADE CONSTRAINTS;
 DROP TABLE DETALLE_TRATAMIENTO CASCADE CONSTRAINTS;
 DROP TABLE TEMPORAL;
@@ -22,7 +21,7 @@ CREATE TABLE Profesion(
 --Creamos la Tabla para Empleado, que contendra todos los empleados y su informacion
 CREATE TABLE Empleado(
     Id_Empleado     NUMBER GENERATED AS IDENTITY PRIMARY KEY NOT NULL,
-    Nombres         VARCHAR2(25) NOT NULL,
+    Nombre          VARCHAR2(25) NOT NULL,
     Apellidos       VARCHAR2(50) NOT NULL,
     Direccion       VARCHAR2(50) NOT NULL,
     Telefono        VARCHAR(20) NOT NULL,
@@ -63,30 +62,24 @@ CREATE TABLE Sintoma(
     Nombre          VARCHAR2(50)
 );
 
---Creamos la Tabla Detalle_Evaluacion, que tendra todos los sintomas que presento el paciente durante la evaluacion.
-CREATE TABLE Detalle_Evaluacion(
-    Id_Detalle      NUMBER GENERATED AS IDENTITY PRIMARY KEY NOT NULL,
-    ID_EVALUACION   NUMBER NOT NULL,
-    ID_SINTOMA      NUMBER NOT NULL,
-    CONSTRAINT FK_DETALLE_EVALUACION FOREIGN KEY (ID_EVALUACION) REFERENCES Evaluacion(Id_Evaluacion),
-    CONSTRAINT FK_DETALLE_SINTOMA FOREIGN KEY (ID_SINTOMA) REFERENCES Sintoma(Id_Sintoma)
-);
-
 --Creamos la Tabla Diagnostico, que tendra un catalogo con todos los diagnosticos comprobados
 CREATE TABLE Diagnostico(
     Id_Diagnostico  NUMBER GENERATED AS IDENTITY PRIMARY KEY NOT NULL,
     Nombre          VARCHAR2(50)
 );
 
---Creamos la Tabla con la que Asociamos Sintoma y Diagnostico
-CREATE TABLE Sintoma_Diagnostico(
-    Id_Sintoma_Diagnostico  NUMBER GENERATED AS IDENTITY PRIMARY KEY NOT NULL,
+
+--Creamos la Tabla Detalle_Evaluacion, que tendra todos los sintomas que presento el paciente durante la evaluacion.
+CREATE TABLE Detalle_Evaluacion(
+    Id_Detalle      NUMBER GENERATED AS IDENTITY PRIMARY KEY NOT NULL,
     Rango           NUMBER NOT NULL,
-    ID_DIAGNOSTICO  NUMBER NOT NULL,
     ID_EVALUACION   NUMBER NOT NULL,
-    CONSTRAINT CHECK_RANGO CHECK (Rango<=10 AND Rango>0),
-    CONSTRAINT FK_SINTOMA_DIAGNOSTICO_DIAGNOSTICO FOREIGN KEY (ID_DIAGNOSTICO) REFERENCES Diagnostico(Id_Diagnostico),
-    CONSTRAINT FK_SINTOMA_DIAGNOSTICO_DETALLE_EVALUACION FOREIGN KEY (ID_EVALUACION) REFERENCES Detalle_Evaluacion(Id_Detalle)
+    ID_SINTOMA      NUMBER NOT NULL,
+    ID_DIAGNOSTICO  NUMBER NOT NULL,
+    CONSTRAINT FK_DETALLE_EVALUACION FOREIGN KEY (ID_EVALUACION) REFERENCES Evaluacion(Id_Evaluacion),
+    CONSTRAINT FK_DETALLE_SINTOMA FOREIGN KEY (ID_SINTOMA) REFERENCES Sintoma (Id_Sintoma),
+    CONSTRAINT FK_DETALLE_DIAGNOSTICO FOREIGN KEY (ID_DIAGNOSTICO) REFERENCES Diagnostico (Id_Diagnostico),
+    CONSTRAINT CHECK_RANGO CHECK(Rango>0 AND Rango<=10)
 );
 
 --Creamos la Tabla Tratamiento que tendra un catalogo con todos los tratamientos que se han comprobado
