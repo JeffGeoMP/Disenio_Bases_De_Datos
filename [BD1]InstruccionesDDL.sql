@@ -22,7 +22,7 @@ CREATE TABLE Profesion(
 CREATE TABLE Empleado(
     Id_Empleado     NUMBER GENERATED AS IDENTITY PRIMARY KEY NOT NULL,
     Nombre          VARCHAR2(25) NOT NULL,
-    Apellidos       VARCHAR2(50) NOT NULL,
+    Apellido       VARCHAR2(50) NOT NULL,
     Direccion       VARCHAR2(50) NOT NULL,
     Telefono        VARCHAR(20) NOT NULL,
     Fecha_Nacimiento    DATE,
@@ -35,8 +35,8 @@ CREATE TABLE Empleado(
 --Creamos la Tabla Paciente, que contendra todos los pacientes y su informacion
 CREATE TABLE Paciente(
     Id_Paciente     NUMBER GENERATED AS IDENTITY PRIMARY KEY NOT NULL,
-    Nombres         VARCHAR2(25) NOT NULL,
-    Apellidos       VARCHAR2(50) NOT NULL,
+    Nombre         VARCHAR2(25) NOT NULL,
+    Apellido       VARCHAR2(50) NOT NULL,
     Direccion       VARCHAR2(50) NOT NULL,
     Telefono        VARCHAR(20) NOT NULL,
     Fecha_Nacimiento    DATE NOT NULL,
