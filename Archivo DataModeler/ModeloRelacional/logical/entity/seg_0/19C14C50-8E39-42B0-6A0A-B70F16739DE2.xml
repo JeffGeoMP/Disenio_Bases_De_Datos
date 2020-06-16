@@ -3,8 +3,9 @@
 <createdBy>Jeffe</createdBy>
 <createdTime>2020-06-12 03:56:11 UTC</createdTime>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="false"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -19,8 +20,9 @@
 <createdBy>Jeffe</createdBy>
 <createdTime>2020-06-12 03:56:54 UTC</createdTime>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="false"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -31,23 +33,10 @@
 <createdBy>Jeffe</createdBy>
 <createdTime>2020-06-12 03:57:41 UTC</createdTime>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="false"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Id_Sintoma" id="0AEB6A8E-3BEE-636D-92FA-2D74657F31B2">
-<createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 03:58:15 UTC</createdTime>
-<generatorID>5AEDA16A-2105-5DE2-5894-68758275353C</generatorID>
-<ownerDesignName>ModeloRelacional</ownerDesignName>
-<engineerTo>
-<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
-</engineerTo>
-<referedAttribute>3C59788F-EB58-C7F1-64C3-4853667057B3</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -67,19 +56,33 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Id_Evaluacion" id="A4713BA8-359B-53D7-E30A-1A1F9397AE85">
+<createdBy>Jeffe</createdBy>
+<createdTime>2020-06-16 01:27:40 UTC</createdTime>
+<generatorID>2136E675-61F0-AA0F-7D2E-1D448E3B6112</generatorID>
+<ownerDesignName>ModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
+</engineerTo>
+<referedAttribute>356A7F72-0EE8-8713-0082-55D5E096030E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="17492643-E48D-A970-491D-6A94DD24C8CB" name="Sintoma_Diagnostico PK">
 <createdBy>Jeffe</createdBy>
 <createdTime>2020-06-12 03:57:39 UTC</createdTime>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="false"/>
+<item key="8A69548C-AFB7-0053-E25A-EF27130C354A" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>813A45CA-D07C-3092-FD43-168103B0CC0C</attributeRef>
+<attributeRef>A4713BA8-359B-53D7-E30A-1A1F9397AE85</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

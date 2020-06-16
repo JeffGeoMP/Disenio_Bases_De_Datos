@@ -1,17 +1,17 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7CAD32B7-9D8E-6AF6-2D9F-FB40C8548CDD" name="Sintoma_Diagnostico">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FB311D7B-7096-B9F6-CD46-DA2C4005C0F3" name="DETALLE_TRATAMIENTO">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 04:13:59 UTC</createdTime>
-<generatorID>19C14C50-8E39-42B0-6A0A-B70F16739DE2</generatorID>
+<createdTime>2020-06-16 03:40:05 UTC</createdTime>
+<generatorID>1013DBDC-0DD7-789E-132A-F7985129A1FD</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="Id_Sintoma_Diagnostico" id="E0926E1D-6A90-018D-ACD6-3B39FBAC48D7">
+<Column name="Id_Detalle" id="FC72BC87-3B10-B217-07EE-7CC084B47F94">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 04:13:59 UTC</createdTime>
-<generatorID>813A45CA-D07C-3092-FD43-168103B0CC0C</generatorID>
+<createdTime>2020-06-16 03:40:05 UTC</createdTime>
+<generatorID>85123FB0-FB42-D8D8-E147-D6C40CEBF9CB</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -19,21 +19,21 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Rango" id="19546E3D-B667-017F-597C-C9E1CE1F0B0E">
+<Column name="Fecha" id="AF6945B5-9D01-2525-29B8-857A257AAA4A">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 04:13:59 UTC</createdTime>
-<generatorID>964D1359-C8B1-FC0D-3BB0-BC7004C07097</generatorID>
+<createdTime>2020-06-16 03:40:05 UTC</createdTime>
+<generatorID>9B9BC009-B294-172B-1F4F-65007698761E</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Diagnostico_Id_Diagnostico" id="09C3DF9F-A07E-E1EE-F201-23F0A00ECFBC">
+<Column name="TRATAMIENTO_Id_Tratamiento" id="5C1336E3-C6F8-B46D-B7D1-945AAF3A484E">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 04:13:59 UTC</createdTime>
-<generatorID>25738B19-54E0-A017-59D4-423242A4F47F</generatorID>
+<createdTime>2020-06-16 03:40:05 UTC</createdTime>
+<generatorID>CDAFFCBE-9EF7-0558-E6D3-C91F812D6A11</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -42,12 +42,13 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="6FCBDC33-C409-9BEF-C956-467A87E52200" referredColumn="8A5FB21C-268D-F2DA-D79E-D09DC5A74A42"/>
+<colAssociation fkAssociation="3418F01C-0C10-A9B6-E9A6-78E4C910CC48" referredColumn="3861796D-1970-0111-B46E-83815CAE36ED"/>
 </associations>
 </Column>
-<Column name="Detalle_Evaluacion_Id_Evaluacion" id="097AF47C-BB39-7D7D-0D97-45082BD20A1E">
+<Column name="PACIENTE_Id_Paciente" id="33DCC2A6-BD6D-9DB3-548F-ABE4357F33CD">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-16 01:38:55 UTC</createdTime>
+<createdTime>2020-06-16 03:40:05 UTC</createdTime>
+<generatorID>93E49A8C-2685-7533-7AA3-F75C9522BBE8</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -56,43 +57,43 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="966E1E49-A3DC-5AA4-4242-CE4750DCEE22" referredColumn="3431D658-2F49-BE93-C46B-5D4B2BB4E98B"/>
+<colAssociation fkAssociation="76BA166C-DE2C-4825-424C-00D912CE8375" referredColumn="D298A147-DDD3-BA90-FF70-33C7A40CAEA6"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="6ADDCE28-AF3A-933A-5E73-6B740CE7D7A9" name="Sintoma_Diagnostico_PK">
+<ind_PK_UK id="0867F017-74EF-79AB-5055-4F188F7551E2" name="DETALLE_TRATAMIENTO_PK">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 04:13:59 UTC</createdTime>
-<generatorID>17492643-E48D-A970-491D-6A94DD24C8CB</generatorID>
+<createdTime>2020-06-16 03:40:05 UTC</createdTime>
+<generatorID>F5D3DC86-9BC4-81CC-6ED6-267E4F6A5C4F</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="E0926E1D-6A90-018D-ACD6-3B39FBAC48D7"/>
+<colUsage columnID="FC72BC87-3B10-B217-07EE-7CC084B47F94"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="B7A06685-BED6-CA9B-EDF7-8BD246281C6E" name="Sintoma_Diagnostico_Diagnostico_FK">
+<ind_PK_UK id="8C0CB7AC-F727-D0F6-769E-3EE8980C475D" name="DETALLE_TRATAMIENTO_TRATAMIENTO_FK">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 04:13:59 UTC</createdTime>
-<generatorID>1982CDC6-1BBA-2BF2-40F2-7CC48CCFF748</generatorID>
+<createdTime>2020-06-16 03:40:05 UTC</createdTime>
+<generatorID>259975D9-5276-2BCF-12F1-F62C737CF2EA</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="09C3DF9F-A07E-E1EE-F201-23F0A00ECFBC"/>
+<colUsage columnID="5C1336E3-C6F8-B46D-B7D1-945AAF3A484E"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="EACB3DFE-86B4-6D96-7CFF-34A9DF68747C" name="Sintoma_Diagnostico_Detalle_Evaluacion_FK">
+<ind_PK_UK id="9B668FDA-52F5-B3CB-1BEC-466560AC4EA0" name="DETALLE_TRATAMIENTO_PACIENTE_FK">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-16 01:30:44 UTC</createdTime>
-<generatorID>2136E675-61F0-AA0F-7D2E-1D448E3B6112</generatorID>
+<createdTime>2020-06-16 03:40:05 UTC</createdTime>
+<generatorID>63FF9056-9632-E1D5-E7B2-98CE5E7DC475</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="097AF47C-BB39-7D7D-0D97-45082BD20A1E"/>
+<colUsage columnID="33DCC2A6-BD6D-9DB3-548F-ABE4357F33CD"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
