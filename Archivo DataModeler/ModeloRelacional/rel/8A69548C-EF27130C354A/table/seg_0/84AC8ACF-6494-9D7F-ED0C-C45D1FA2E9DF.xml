@@ -19,16 +19,15 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Seguimiento_Id_Seguimiento" id="6DD1BFE0-8E09-585F-804D-CC5A58E630A9">
+<Column name="Fecha" id="338F1249-D42E-AB3C-0403-5D8E3FB87BD5">
 <createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 04:13:59 UTC</createdTime>
-<generatorID>879B94B8-D2E5-AC1E-63D3-443390418DA2</generatorID>
+<createdTime>2020-06-14 03:46:10 UTC</createdTime>
+<generatorID>9B9BC009-B294-172B-1F4F-65007698761E</generatorID>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="Tratamiento_Id_Tratamiento" id="6A99F972-5B0D-69B2-AD0D-0CCE5779083D">
@@ -45,29 +44,6 @@
 <associations>
 <colAssociation fkAssociation="ED0A1E58-6612-1842-79EF-1DECFC4B9D5E" referredColumn="7AA79534-44CE-6878-1C7B-527A6C2DE902"/>
 </associations>
-</Column>
-<Column name="Seguimiento_Id_Paciente" id="C2A7B07D-A73F-1DCA-F218-F9B6CAC16017">
-<createdBy>Jeffe</createdBy>
-<createdTime>2020-06-12 04:13:59 UTC</createdTime>
-<generatorID>84A9D81C-9556-A16C-1141-04D3A2DD4954</generatorID>
-<ownerDesignName>ModeloRelacional</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="Fecha" id="338F1249-D42E-AB3C-0403-5D8E3FB87BD5">
-<createdBy>Jeffe</createdBy>
-<createdTime>2020-06-14 03:46:10 UTC</createdTime>
-<generatorID>9B9BC009-B294-172B-1F4F-65007698761E</generatorID>
-<ownerDesignName>ModeloRelacional</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="Paciente_Id_Paciente" id="12898E2C-2C00-00E6-F439-685E4EC45DCE">
 <createdBy>Jeffe</createdBy>
@@ -96,8 +72,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="E708F58D-2885-B38C-38EA-17FED5A3BE7F"/>
-<colUsage columnID="6A99F972-5B0D-69B2-AD0D-0CCE5779083D"/>
-<colUsage columnID="12898E2C-2C00-00E6-F439-685E4EC45DCE"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="CC218CD7-A60F-654F-41DF-2AFF19339E48" name="Detalle_Tratamiento_Tratamiento_FK">
