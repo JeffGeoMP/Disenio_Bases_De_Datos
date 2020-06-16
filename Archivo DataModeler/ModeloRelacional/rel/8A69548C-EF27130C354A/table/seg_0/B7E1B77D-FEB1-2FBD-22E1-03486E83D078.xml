@@ -31,7 +31,7 @@
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Apellidos" id="08888268-A485-030A-D5A3-0BC9981539A1">
+<Column name="Apellido" id="08888268-A485-030A-D5A3-0BC9981539A1">
 <createdBy>Jeffe</createdBy>
 <createdTime>2020-06-16 03:40:05 UTC</createdTime>
 <generatorID>BDF38534-F41C-3B73-33AB-E538CBAB01E7</generatorID>

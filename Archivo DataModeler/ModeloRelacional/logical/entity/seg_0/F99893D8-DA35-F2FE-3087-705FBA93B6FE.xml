@@ -40,7 +40,7 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Apellidos" id="BDF38534-F41C-3B73-33AB-E538CBAB01E7">
+<Attribute name="Apellido" id="BDF38534-F41C-3B73-33AB-E538CBAB01E7">
 <createdBy>Jeffe</createdBy>
 <createdTime>2020-06-12 03:33:16 UTC</createdTime>
 <ownerDesignName>ModeloRelacional</ownerDesignName>
