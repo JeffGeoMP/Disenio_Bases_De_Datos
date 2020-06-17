@@ -138,38 +138,37 @@ WHERE t.FECHA_TRATAMIENTO IS NOT NULL AND
     t.DIRECCION_PACIENTE IS NOT NULL AND
     t.TRATAMIENTO_APLICADO IS NOT NULL;
 
-
--- Insertamos Los detalles de las evaluaciones que se han practicado
-INSERT INTO detalle_evaluacion (
-    rango,
-    id_evaluacion,
-    id_sintoma,
-    id_diagnostico
+-- Insertamos las relaciones entre Sintoma y Diagnostico
+INSERT INTO detalle_evaluacion(
+    ID_EVALUACION,
+    ID_SINTOMA
 )
 SELECT DISTINCT
-    t.RANGO_DEL_DIAGNOSTICO,
-    
-    (SELECT id_evaluacion FROM evaluacion e WHERE e.ID_EMPLEADO = 
-        (SELECT id_empleado FROM empleado a WHERE t.NOMBRE_EMPLEADO = a.nombre AND
-        t.APELLIDO_EMPLEADO = a.apellido AND
-        t.DIRECCION_EMPLEADO = a.direccion)
-    
-     AND e.ID_PACIENTE = (SELECT id_paciente FROM paciente b WHERE t.NOMBRE_PACIENTE = b.nombre AND
-        t.APELLIDO_PACIENTE = b.apellido AND
-        t.DIRECCION_PACIENTE = b.direccion)
-     
-     AND e.FECHA= TO_CHAR(TO_DATE(t.FECHA_EVALUACION,'YYYY/MM/DD'),'DD/MM/YYYY'),
-    (SELECT id_sintoma FROM sintoma s WHERE s.nombre=t.SINTOMA_DEL_PACIENTE),
-    (SELECT id_diagnostico FROM diagnostico d WHERE d.nombre = t.DIAGNOSTICO_DEL_SINTOMA)
-    
+    (SELECT id_evaluacion FROM evaluacion e WHERE e.id_empleado = (
+        SELECT id_empleado FROM empleado x 
+        WHERE x.nombre = t.NOMBRE_EMPLEADO AND x.apellido = t.APELLIDO_EMPLEADO AND x.direccion = t.DIRECCION_EMPLEADO 
+    ) AND e.id_paciente = (
+        SELECT id_paciente FROM paciente y 
+        WHERE y.nombre = t.NOMBRE_PACIENTE AND y.apellido = t.APELLIDO_PACIENTE AND y.direccion = t.DIRECCION_PACIENTE 
+    )AND e.fecha = TO_CHAR(TO_DATE(t.FECHA_EVALUACION,'YYYY/MM/DD'),'DD/MM/YYYY')),
+    (SELECT id_sintoma FROM sintoma s WHERE s.nombre = t.SINTOMA_DEL_PACIENTE)
 FROM temporal t
-WHERE t.FECHA_EVALUACION IS NOT NULL AND
+WHERE t.SINTOMA_DEL_PACIENTE IS NOT NULL AND 
     t.NOMBRE_EMPLEADO IS NOT NULL AND
-    t.APELLIDO_EMPLEADO IS NOT NULL AND 
     t.DIRECCION_EMPLEADO IS NOT NULL AND
+    t.APELLIDO_EMPLEADO IS NOT NULL AND
     t.NOMBRE_PACIENTE IS NOT NULL AND
     t.APELLIDO_PACIENTE IS NOT NULL AND
-    t.DIRECCION_PACIENTE IS NOT NULL AND
-    t.RANGO_DEL_DIAGNOSTICO IS NOT NULL AND
-    t.SINTOMA_DEL_PACIENTE IS NOT NULL AND
-    t.DIAGNOSTICO_DEL_SINTOMA IS NOT NULL;
+    t.DIRECCION_PACIENTE IS NOT NULL;
+    
+--Muestra la Cantidad Total Despues de Hacer Todos Los Insert
+SELECT 'PROFESIONES' AS TABLA, COUNT(*) AS TOTALES FROM profesion UNION
+SELECT 'EMPLEADOS' AS TABLA, COUNT(*) AS TOTALES FROM empleado UNION
+SELECT 'PACIENTES' AS TABLA, COUNT(*) AS TOTALES FROM paciente UNION
+SELECT 'EVALUACIONES' AS TABLA, COUNT(*) AS TOTALES FROM evaluacion UNION
+SELECT 'TRATAMIENTOS' AS TABLA, COUNT(*) AS TOTALES FROM tratamiento UNION
+SELECT 'DETALLE_TRATAMIENTOS' AS TABLA, COUNT(*) AS TOTALES FROM detalle_tratamiento UNION
+SELECT 'SINTOMAS' AS TABLA, COUNT(*) AS TOTALES FROM sintoma UNION
+SELECT 'DIAGNOSTICOS' AS TABLA, COUNT(*) AS TOTALES FROM diagnostico UNION
+SELECT 'SINTOMA_DIAGNOSTICO' AS TABLA, COUNT(*) AS TOTALES FROM sintoma_diagnostico UNION;
+SELECT 'DETALLE_EVALUACIONES' AS TABLA, COUNT(*) AS TOTALES FROM detalle_evaluacion;
