@@ -22,7 +22,7 @@ CREATE TABLE Profesion(
 CREATE TABLE Empleado(
     Id_Empleado     NUMBER GENERATED AS IDENTITY PRIMARY KEY NOT NULL,
     Nombre          VARCHAR2(25) NOT NULL,
-    Apellido        VARCHAR2(50) NOT NULL,
+    Apellido        VARCHAR2(25) NOT NULL,
     Direccion       VARCHAR2(50) NOT NULL,
     Telefono        VARCHAR(20) NOT NULL,
     Fecha_Nacimiento    DATE,
@@ -36,7 +36,7 @@ CREATE TABLE Empleado(
 CREATE TABLE Paciente(
     Id_Paciente     NUMBER GENERATED AS IDENTITY PRIMARY KEY NOT NULL,
     Nombre          VARCHAR2(25) NOT NULL,
-    Apellido        VARCHAR2(50) NOT NULL,
+    Apellido        VARCHAR2(25) NOT NULL,
     Direccion       VARCHAR2(50) NOT NULL,
     Telefono        VARCHAR(20) NOT NULL,
     Fecha_Nacimiento    DATE NOT NULL,
@@ -62,23 +62,29 @@ CREATE TABLE Sintoma(
     Nombre          VARCHAR2(50)
 );
 
+--Creamos la Tabla Detalle_Evaluacion, que tendra todos los sintomas que presento el paciente durante la evaluacion.
+CREATE TABLE Detalle_Evaluacion(
+    Id_Detalle      NUMBER GENERATED AS IDENTITY PRIMARY KEY NOT NULL,
+    ID_EVALUACION   NUMBER NOT NULL,
+    ID_SINTOMA      NUMBER NOT NULL,
+    CONSTRAINT FK_DETALLE_EVALUACION FOREIGN KEY (ID_EVALUACION) REFERENCES Evaluacion(Id_Evaluacion),
+    CONSTRAINT FK_DETALLE_SINTOMA FOREIGN KEY (ID_SINTOMA) REFERENCES Sintoma (Id_Sintoma)
+);
+
 --Creamos la Tabla Diagnostico, que tendra un catalogo con todos los diagnosticos comprobados
 CREATE TABLE Diagnostico(
     Id_Diagnostico  NUMBER GENERATED AS IDENTITY PRIMARY KEY NOT NULL,
     Nombre          VARCHAR2(50)
 );
 
-
---Creamos la Tabla Detalle_Evaluacion, que tendra todos los sintomas que presento el paciente durante la evaluacion.
-CREATE TABLE Detalle_Evaluacion(
-    Id_Detalle      NUMBER GENERATED AS IDENTITY PRIMARY KEY NOT NULL,
+--Creamos la tabla que tendra la relacion entre Sintoma y Diagnostico
+CREATE TABLE Sintoma_Diagnostico(
+    Id_Sintoma_Diagnostico  NUMBER GENERATED AS IDENTITY PRIMARY KEY NOT NULL,
     Rango           NUMBER NOT NULL,
-    ID_EVALUACION   NUMBER NOT NULL,
     ID_SINTOMA      NUMBER NOT NULL,
     ID_DIAGNOSTICO  NUMBER NOT NULL,
-    CONSTRAINT FK_DETALLE_EVALUACION FOREIGN KEY (ID_EVALUACION) REFERENCES Evaluacion(Id_Evaluacion),
-    CONSTRAINT FK_DETALLE_SINTOMA FOREIGN KEY (ID_SINTOMA) REFERENCES Sintoma (Id_Sintoma),
-    CONSTRAINT FK_DETALLE_DIAGNOSTICO FOREIGN KEY (ID_DIAGNOSTICO) REFERENCES Diagnostico (Id_Diagnostico),
+    CONSTRAINT FK_SINTOMA_DIAGNOSTICO_SINTOMA FOREIGN KEY (ID_SINTOMA) REFERENCES Sintoma(Id_Sintoma),
+    CONSTRAINT FK_SINTOMA_DIAGNOSTICO_DIAGNOTSTICO FOREIGN KEY (ID_DIAGNOSTICO) REFERENCES Diagnostico (Id_Diagnostico),
     CONSTRAINT CHECK_RANGO CHECK(Rango>0 AND Rango<=10)
 );
 
