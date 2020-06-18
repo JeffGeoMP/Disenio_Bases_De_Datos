@@ -9,10 +9,12 @@ _El Proyecto consiste en la realizacion de una Base de datos, a partir del enunc
 
 ### Prerequisitos:
 * Tener Instalado Java en su version 1.8 o superior
-* Tener Instalado JDK en su versuib 11 o superior
+* Tener Instalado JDK en su version 11 o superior
 
 ### Instalación 🔧
-* Ejecutar el Archivo Exec.sql en el DBMS.
+* Ejecutar el Archivo InstruccionesDDL.sql (La Primera vez quitar la Eliminacion de las Tablas)
+* Ejecutar `sqlldr userid=system control='[BD1]ArchivoControl.ctl` en el CMD desde la Raiz del proyecto
+* Ejecutar el Archivo CargaDeDatos.sql
 
 ### Construido con 🛠️
 * Windows 10 - Sistema Operativo
@@ -27,7 +29,7 @@ _El Proyecto consta de lo siguiente:_
 * Carga Masiva de Datos a partir de un Archivo CSV.
 * Script de la Base de Datos.
 * Script de LLenado de la Base de Datos.
-* Script del Archivo de Control usado para la carga masiva.
+* Script del Archivo de Control usado para la carga masiva SQLOADER.
 * Script de Consultas realizadas.
 
 ### Licencia 📄
