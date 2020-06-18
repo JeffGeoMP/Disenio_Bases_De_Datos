@@ -6,10 +6,12 @@ email: jeffgeomp@gmail.com<br>
 
 ### Description 🚀
 _El Proyecto consiste en la realizacion de una Base de datos, a partir del enunciado que se presenta._
+_Ademas de la realizacion de Carga masiva de datos (CSV) y consultas SQL._
 
 ### Prerequisitos:
 * Tener Instalado Java en su version 1.8 o superior
 * Tener Instalado JDK en su version 11 o superior
+* Tener las Herramientas que se Describen en Contruido con
 
 ### Instalación 🔧
 * Ejecutar el Archivo InstruccionesDDL.sql (La Primera vez quitar la Eliminacion de las Tablas)
