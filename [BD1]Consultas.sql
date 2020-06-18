@@ -93,7 +93,7 @@ ORDER BY COUNT(id_paciente) DESC;
 --    2017 y mostrarlos de mayor a menor en base al porcentaje calculado.
 
 SELECT e.nombre, e.apellido, ROUND((COUNT(v.id_evaluacion)/(SELECT COUNT(*) FROM evaluacion v
-                            WHERE TO_CHAR(v.fecha,'YYYY')>='2017'))*100,3) AS PORCENTAJE
+                            WHERE TO_CHAR(v.fecha,'YYYY')>='2017'))*100,2) AS PORCENTAJE
 FROM empleado e
 INNER JOIN evaluacion v ON e.id_empleado = v.id_empleado
 WHERE TO_CHAR(v.fecha,'YYYY')>='2017'
@@ -114,3 +114,22 @@ ORDER BY PORCENTAJE DESC;
 --*EXTRA: Mostrar el año y mes (de la fecha de evaluación) junto con el nombre y apellido 
 --de los pacientes que más tratamientos se han aplicado y los que menos. (Todo en una sola consulta). 
 -- Nota: debe tomar como cantidad mínima 1 tratamiento.--
+
+SELECT TO_CHAR(v.fecha,'YYYY') AS AÑO, TO_CHAR(v.fecha,'MONTH') AS MES, p.nombre, p.apellido, COUNT(*) AS TRATAMIENTOS 
+FROM paciente p
+INNER JOIN detalle_tratamiento dt ON p.id_paciente = dt.id_paciente
+INNER JOIN evaluacion v ON p.id_paciente = v.id_paciente 
+GROUP BY TO_CHAR(v.fecha,'YYYY'), TO_CHAR(v.fecha,'MONTH'), p.nombre, p.apellido
+HAVING COUNT(*)=(SELECT MAX(TRATAMIENTOS) FROM (SELECT p.nombre, p.apellido, COUNT(*) AS TRATAMIENTOS FROM paciente p
+                INNER JOIN detalle_tratamiento dt ON p.id_paciente = dt.id_paciente
+                GROUP BY p.nombre, p.apellido))
+UNION
+SELECT TO_CHAR(v.fecha,'YYYY') AS AÑO, TO_CHAR(v.fecha,'MONTH') AS MES, p.nombre, p.apellido, COUNT(*) AS TRATAMIENTOS 
+FROM paciente p
+INNER JOIN detalle_tratamiento dt ON p.id_paciente = dt.id_paciente
+INNER JOIN evaluacion v ON p.id_paciente = v.id_paciente 
+GROUP BY TO_CHAR(v.fecha,'YYYY'), TO_CHAR(v.fecha,'MONTH'), p.nombre, p.apellido
+HAVING COUNT(*)=(SELECT MIN(TRATAMIENTOS) FROM (SELECT p.nombre, p.apellido, COUNT(*) AS TRATAMIENTOS FROM paciente p
+                INNER JOIN detalle_tratamiento dt ON p.id_paciente = dt.id_paciente
+                GROUP BY p.nombre, p.apellido))
+ORDER BY TRATAMIENTOS DESC;
