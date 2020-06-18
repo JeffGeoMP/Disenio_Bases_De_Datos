@@ -1,0 +1,72 @@
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Mié Jun 17 20:44:57 2020
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+
+Archivo de Control:   [BD1]ArchivoControl.ctl
+Juego de caracteres UTF8 especificado para todas las entradas.
+
+Archivo de Datos:      CSV/BIG_SMOKE_DATA.csv
+  Archivo de Errores:     BIG_SMOKE_DATA.bad
+  Desechar Archivo:  ninguno especificado
+ 
+ (Permitir todos los registros desechados)
+
+Número a cargar: ALL
+Número que omitir: 1
+Errores permitidos: 50
+Matriz de enlace:     250 filas, máximo de 1048576 bytes
+Continuación:    ninguno especificado
+Ruta de acceso utilizada:      Convencional
+
+Tabla TEMPORAL, cargada de cada registro lógico.
+Opción INSERT activa para esta tabla: TRUNCATE
+Opción TRAILING NULLCOLS activada
+
+   Nombre Columna                  Posición   Long  Term Entorno Tipo de Dato
+------------------------------ ---------- ----- ---- ---- ---------------------
+NOMBRE_EMPLEADO                     FIRST     *   ;  O(") CHARACTER            
+APELLIDO_EMPLEADO                    NEXT     *   ;  O(") CHARACTER            
+DIRECCION_EMPLEADO                   NEXT     *   ;  O(") CHARACTER            
+TELEFONO_EMPLEADO                    NEXT     *   ;  O(") CHARACTER            
+GENERO_EMPLEADO                      NEXT     *   ;  O(") CHARACTER            
+FECHA_NACIMIENTO_EMPLEADO            NEXT     *   ;  O(") CHARACTER            
+TITULO_DEL_EMPLEADO                  NEXT     *   ;  O(") CHARACTER            
+NOMBRE_PACIENTE                      NEXT     *   ;  O(") CHARACTER            
+APELLIDO_PACIENTE                    NEXT     *   ;  O(") CHARACTER            
+DIRECCION_PACIENTE                   NEXT     *   ;  O(") CHARACTER            
+TELEFONO_PACIENTE                    NEXT     *   ;  O(") CHARACTER            
+GENERO_PACIENTE                      NEXT     *   ;  O(") CHARACTER            
+FECHA_NACIMIENTO_PACIENTE            NEXT     *   ;  O(") CHARACTER            
+ALTURA                               NEXT     *   ;  O(") CHARACTER            
+PESO                                 NEXT     *   ;  O(") CHARACTER            
+FECHA_EVALUACION                     NEXT     *   ;  O(") CHARACTER            
+SINTOMA_DEL_PACIENTE                 NEXT     *   ;  O(") CHARACTER            
+DIAGNOSTICO_DEL_SINTOMA              NEXT     *   ;  O(") CHARACTER            
+RANGO_DEL_DIAGNOSTICO                NEXT     *   ;  O(") CHARACTER            
+FECHA_TRATAMIENTO                    NEXT     *   ;  O(") CHARACTER            
+TRATAMIENTO_APLICADO                 NEXT     *   ;  O(") CHARACTER            
+
+el valor utilizado para el parámetro ROWS ha cambiado de 250 a 193
+
+Tabla TEMPORAL:
+  126333 Filas cargadas correctamente.
+  0 Filas no cargadas debido a errores de datos.
+  0 Filas no cargadas porque todas las cláusulas WHEN han fallado.
+  0 Filas no cargadas porque todos los campos eran nulos.
+
+
+Espacio asignado a matriz de enlace:          1045674 bytes (193 filas)
+Bytes de buffer de lectura: 1048576
+
+Total de registros lógicos omitidos:          1
+Total de registros lógicos leídos:      126333
+Total de registros lógicos rechazados:         0
+Total de registros lógicos desechados:        0
+
+La ejecución empezó en Mié Jun 17 20:44:57 2020
+La ejecución terminó en Mié Jun 17 20:45:14 2020
+
+Tiempo transcurrido:     00:00:16.64
+Tiempo de CPU:         00:00:03.44

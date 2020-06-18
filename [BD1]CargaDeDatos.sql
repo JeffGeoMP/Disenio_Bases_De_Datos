@@ -1,3 +1,6 @@
+--Comando para Ejecutar SQLOADER en CMD:
+--sqlldr userid=system control='[BD1]ArchivoControl.ctl'
+
 --Insertamos los Datos de Nuestra Tabla Temporal hacia Nuestro Modelo E-R
 --Insertamos Las Profesiones
 INSERT INTO profesion (
