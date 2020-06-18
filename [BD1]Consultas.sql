@@ -114,6 +114,7 @@ ORDER BY PORCENTAJE DESC;
 --*EXTRA: Mostrar el año y mes (de la fecha de evaluación) junto con el nombre y apellido 
 --de los pacientes que más tratamientos se han aplicado y los que menos. (Todo en una sola consulta). 
 -- Nota: debe tomar como cantidad mínima 1 tratamiento.--
+--DUDA
 
 SELECT TO_CHAR(v.fecha,'YYYY') AS AÑO, TO_CHAR(v.fecha,'MONTH') AS MES, p.nombre, p.apellido, COUNT(*) AS TRATAMIENTOS 
 FROM paciente p
@@ -133,3 +134,17 @@ HAVING COUNT(*)=(SELECT MIN(TRATAMIENTOS) FROM (SELECT p.nombre, p.apellido, COU
                 INNER JOIN detalle_tratamiento dt ON p.id_paciente = dt.id_paciente
                 GROUP BY p.nombre, p.apellido))
 ORDER BY TRATAMIENTOS DESC;
+
+
+SELECT f.año, f.mes, p.nombre, p.apellido, c.tratamientos
+FROM paciente p
+INNER JOIN (SELECT TO_CHAR(v.fecha, 'YYYY') AS AÑO, TO_CHAR(v.fecha, 'MONTH') AS MES, id_paciente FROM evaluacion v) f ON f.id_paciente = p.id_paciente
+INNER JOIN (SELECT id_paciente, COUNT(*) AS tratamientos FROM detalle_tratamiento dt GROUP BY id_paciente) c ON f.id_paciente = c.id_paciente
+INNER JOIN (SELECT f.año, f.mes, MAX(c.tratamientos) AS MAXI, MIN(c.tratamientos) AS MINI
+            FROM (SELECT DISTINCT TO_CHAR(v.fecha, 'YYYY') AS AÑO, TO_CHAR(v.fecha, 'MONTH') AS MES, id_paciente FROM evaluacion v) f
+            INNER JOIN (SELECT id_paciente, COUNT(*) AS tratamientos
+                        FROM detalle_tratamiento
+                        GROUP BY id_paciente) c ON f.id_paciente = c.id_paciente
+            GROUP BY f.AÑO, f.MES) M ON M.AÑO = F.AÑO AND M.MES = F.MES AND (M.MAXI = c.tratamientos OR M.MINI = c.tratamientos)
+ORDER BY f.AÑO, F.MES, c.tratamientos DESC;
+            

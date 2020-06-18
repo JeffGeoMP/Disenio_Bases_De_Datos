@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 18.0.0.0.0 - Production on Mié Jun 17 20:44:57 2020
+SQL*Loader: Release 18.0.0.0.0 - Production on Mié Jun 17 22:39:24 2020
 Version 18.4.0.0.0
 
 Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
@@ -65,8 +65,8 @@ Total de registros lógicos leídos:      126333
 Total de registros lógicos rechazados:         0
 Total de registros lógicos desechados:        0
 
-La ejecución empezó en Mié Jun 17 20:44:57 2020
-La ejecución terminó en Mié Jun 17 20:45:14 2020
+La ejecución empezó en Mié Jun 17 22:39:24 2020
+La ejecución terminó en Mié Jun 17 22:39:36 2020
 
-Tiempo transcurrido:     00:00:16.64
-Tiempo de CPU:         00:00:03.44
+Tiempo transcurrido:     00:00:11.94
+Tiempo de CPU:         00:00:03.56
