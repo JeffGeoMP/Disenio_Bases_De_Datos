@@ -1,22 +1,14 @@
 --1. Mostrar el nombre, apellido y teléfono de todos los empleados y la cantidad de 
 --   pacientes atendidos por cada empleado ordenados de mayor a menor.
 
-SELECT e.nombre, e.apellido, e.telefono, COUNT(v.id_paciente) AS "PACIENTES ATENTIDOS" FROM evaluacion v 
-INNER JOIN empleado e ON v.id_empleado = e.id_empleado
-GROUP BY e.nombre, e.apellido, e.telefono
-ORDER BY COUNT(v.id_paciente) DESC;
-
---Solo verifica la cantidad de registros de la consulta anterior
-SELECT COUNT(*) AS "CANTIDAD DE PACIENTES QUE HAN ATENDIDO" 
-FROM (SELECT e.nombre, e.apellido, e.telefono, COUNT(v.id_paciente) AS "PACIENTES ATENTIDOS" FROM evaluacion v 
-INNER JOIN empleado e ON v.id_empleado = e.id_empleado
-GROUP BY e.nombre, e.apellido, e.telefono
-ORDER BY COUNT(v.id_paciente) DESC);
+SELECT e.nombre, e.apellido, e.telefono,(SELECT COUNT(*) FROM evaluacion v WHERE v.id_empleado = e.id_empleado) AS PACIENTES
+FROM empleado e 
+ORDER BY PACIENTES DESC;
 
 --2. Mostrar el nombre, apellido, dirección y título de todos los empleados de sexo 
 --   masculino que atendieron a más de 3 pacientes en el año 2016.
 
-SELECT e.nombre, e.apellido, e.genero, e.direccion, f.nombre, COUNT(*) AS PACIENTES FROM evaluacion v
+SELECT e.nombre, e.apellido, e.direccion, f.nombre AS TITULO, e.genero, COUNT(*) AS "PACIENTES ATENDIDOS" FROM evaluacion v
 INNER JOIN empleado e ON v.id_empleado = e.id_empleado
 INNER JOIN profesion f ON e.id_profesion = f.id_profesion
 WHERE TO_CHAR(v.fecha,'YYYY')='2016' AND e.genero = 'M'
@@ -52,7 +44,7 @@ WHERE ROWNUM<=5;
 --   Debe mostrar la cantidad de tratamientos que se aplicó el paciente.
 --   Ordenar los resultados de mayor a menor utilizando la cantidad de tratamientos. 
 
-SELECT p.nombre, p.apellido, p.direccion, COUNT(*) FROM detalle_tratamiento dt
+SELECT p.nombre, p.apellido, p.direccion, COUNT(*) AS "TRATAMIENTOS APLICADOS" FROM detalle_tratamiento dt
 INNER JOIN paciente p ON dt.id_paciente = p.id_paciente
 WHERE NOT EXISTS (SELECT * FROM evaluacion v WHERE v.id_paciente=p.id_paciente)
 GROUP BY p.nombre, p.apellido, p.direccion
@@ -74,6 +66,17 @@ ORDER BY COUNT(id_sintoma) DESC;
 --   mostrar los resultados en orden alfabético tomando en cuenta el nombre y apellido 
 --   del paciente.
 
+SELECT DISTINCT p.nombre, p.apellido, p.direccion FROM detalle_evaluacion dt
+INNER JOIN evaluacion v ON dt.id_evaluacion= v.id_evaluacion
+INNER JOIN paciente p ON v.id_paciente = p.id_paciente
+INNER JOIN sintoma s ON dt.id_sintoma = s.id_sintoma
+INNER JOIN sintoma_diagnostico sd ON s.id_sintoma = sd.id_sintoma
+WHERE (SELECT COUNT(a.id_diagnostico) SINTOMA FROM sintoma_diagnostico a
+INNER JOIN diagnostico b ON a.id_diagnostico = b.id_diagnostico
+INNER JOIN sintoma c ON sd.id_sintoma = c.id_sintoma
+WHERE a.rango>5 AND c.nombre=s.nombre)>0
+ORDER BY p.nombre, p.apellido ASC;
+
 --8. Mostrar el nombre, apellido y fecha de nacimiento de todos los empleados de sexo 
 --   femenino cuya dirección es “1475 Dryden Crossing” y hayan atendido por lo menos 
 --   a 2 pacientes.  Mostrar la cantidad de pacientes atendidos por el empleado y 
@@ -89,11 +92,24 @@ ORDER BY COUNT(id_paciente) DESC;
 --9. Mostrar el porcentaje de pacientes que ha atendido cada empleado a partir del año 
 --    2017 y mostrarlos de mayor a menor en base al porcentaje calculado.
 
-
+SELECT e.nombre, e.apellido, ROUND((COUNT(v.id_evaluacion)/(SELECT COUNT(*) FROM evaluacion v
+                            WHERE TO_CHAR(v.fecha,'YYYY')>='2017'))*100,3) AS PORCENTAJE
+FROM empleado e
+INNER JOIN evaluacion v ON e.id_empleado = v.id_empleado
+WHERE TO_CHAR(v.fecha,'YYYY')>='2017'
+GROUP BY e.nombre, e.apellido
+ORDER BY PORCENTAJE DESC;
 
 --10. Mostrar el porcentaje del título de empleado más común de la siguiente manera: 
 --    nombre del título, porcentaje de empleados que tienen ese título. 
 --     Debe ordenar los resultados en base al porcentaje de mayor a menor.
+
+SELECT p.nombre, (COUNT(e.id_profesion)/(SELECT COUNT(e.id_profesion) 
+                FROM profesion p INNER JOIN empleado e ON p.id_profesion = e.id_profesion))*100 AS PORCENTAJE
+FROM profesion p
+INNER JOIN empleado e ON p.id_profesion = e.id_profesion
+GROUP BY p.nombre
+ORDER BY PORCENTAJE DESC;
 
 --*EXTRA: Mostrar el año y mes (de la fecha de evaluación) junto con el nombre y apellido 
 --de los pacientes que más tratamientos se han aplicado y los que menos. (Todo en una sola consulta). 
