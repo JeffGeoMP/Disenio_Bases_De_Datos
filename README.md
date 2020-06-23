@@ -15,7 +15,7 @@ _Ademas de la realizacion de Carga masiva de datos (CSV) y consultas SQL._
 
 ### Instalación 🔧
 * Ejecutar el Archivo InstruccionesDDL.sql (La Primera vez quitar la Eliminacion de las Tablas)
-* Ejecutar `sqlldr userid=system control='[BD1]ArchivoControl.ctl` en el CMD desde la Raiz del proyecto
+* Ejecutar `sqlldr userid=system control='ArchivoControl.ctl` en el CMD desde la Raiz del proyecto
 * Ejecutar el Archivo CargaDeDatos.sql
 
 ### Construido con 🛠️
