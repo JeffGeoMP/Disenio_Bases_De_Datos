@@ -116,26 +116,6 @@ ORDER BY PORCENTAJE DESC;
 -- Nota: debe tomar como cantidad mínima 1 tratamiento.--
 --DUDA
 
-SELECT TO_CHAR(v.fecha,'YYYY') AS AÑO, TO_CHAR(v.fecha,'MONTH') AS MES, p.nombre, p.apellido, COUNT(*) AS TRATAMIENTOS 
-FROM paciente p
-INNER JOIN detalle_tratamiento dt ON p.id_paciente = dt.id_paciente
-INNER JOIN evaluacion v ON p.id_paciente = v.id_paciente 
-GROUP BY TO_CHAR(v.fecha,'YYYY'), TO_CHAR(v.fecha,'MONTH'), p.nombre, p.apellido
-HAVING COUNT(*)=(SELECT MAX(TRATAMIENTOS) FROM (SELECT p.nombre, p.apellido, COUNT(*) AS TRATAMIENTOS FROM paciente p
-                INNER JOIN detalle_tratamiento dt ON p.id_paciente = dt.id_paciente
-                GROUP BY p.nombre, p.apellido))
-UNION
-SELECT TO_CHAR(v.fecha,'YYYY') AS AÑO, TO_CHAR(v.fecha,'MONTH') AS MES, p.nombre, p.apellido, COUNT(*) AS TRATAMIENTOS 
-FROM paciente p
-INNER JOIN detalle_tratamiento dt ON p.id_paciente = dt.id_paciente
-INNER JOIN evaluacion v ON p.id_paciente = v.id_paciente 
-GROUP BY TO_CHAR(v.fecha,'YYYY'), TO_CHAR(v.fecha,'MONTH'), p.nombre, p.apellido
-HAVING COUNT(*)=(SELECT MIN(TRATAMIENTOS) FROM (SELECT p.nombre, p.apellido, COUNT(*) AS TRATAMIENTOS FROM paciente p
-                INNER JOIN detalle_tratamiento dt ON p.id_paciente = dt.id_paciente
-                GROUP BY p.nombre, p.apellido))
-ORDER BY TRATAMIENTOS DESC;
-
-
 SELECT f.año, f.mes, p.nombre, p.apellido, c.tratamientos
 FROM paciente p
 INNER JOIN (SELECT TO_CHAR(v.fecha, 'YYYY') AS AÑO, TO_CHAR(v.fecha, 'MONTH') AS MES, id_paciente FROM evaluacion v) f ON f.id_paciente = p.id_paciente
